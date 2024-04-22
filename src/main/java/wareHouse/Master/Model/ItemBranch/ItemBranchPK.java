@@ -1,4 +1,4 @@
-package skyHo.Master.Model.ItemBranch;
+package wareHouse.Master.Model.ItemBranch;
 
 import java.io.Serializable;
 import lombok.Getter;
@@ -11,7 +11,6 @@ public class ItemBranchPK implements Serializable {
     };
 
     public String branch;
-
     public Integer itemId;
 
     public ItemBranchPK(String pk_branch, Integer pk_itemId) {
@@ -25,12 +24,10 @@ public class ItemBranchPK implements Serializable {
         if (!(other instanceof ItemBranchPK)) {
             return false;
         }
-
         final ItemBranchPK pk = (ItemBranchPK) other;
         if (!pk.branch.equals(branch)) {
             return false;
         }
-
         if (!pk.itemId.equals(itemId)) {
             return false;
         }

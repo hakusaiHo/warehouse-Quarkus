@@ -1,4 +1,4 @@
-package skyHo.Area.Model.OrderHeader;
+package wareHouse.Area.Model.OrderHeader;
 
 import java.io.Serializable;
 

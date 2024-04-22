@@ -1,4 +1,4 @@
-package skyHo.Master.Model.ItemMaster;
+package wareHouse.Master.Model.ItemMaster;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -26,9 +26,7 @@ public class ItemMasterPK {
             return true;
         if (!(other instanceof ItemMasterPK))
             return false;
-
         final ItemMasterPK pk = (ItemMasterPK) other;
-
         if (!pk.itemId.equals(itemId))
             return false;
         return true;

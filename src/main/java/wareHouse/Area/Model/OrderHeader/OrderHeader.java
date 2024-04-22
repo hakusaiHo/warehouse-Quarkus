@@ -1,4 +1,4 @@
-package skyHo.Area.Model.OrderHeader;
+package wareHouse.Area.Model.OrderHeader;
 
 import java.util.Date;
 import jakarta.json.bind.annotation.JsonbDateFormat;
@@ -7,7 +7,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.IdClass;
 import jakarta.persistence.Table;
-import skyHo.Master.AuditInfoVersionBaseEntity;
+import wareHouse.Master.AuditInfoVersionBaseEntity;
 
 @Entity
 @Table(name = "KTST_ORDER_HEADER")

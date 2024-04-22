@@ -1,4 +1,4 @@
-package skyHo.Master;
+package wareHouse.Master;
 
 import java.util.Date;
 import jakarta.persistence.Column;

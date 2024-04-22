@@ -1,4 +1,4 @@
-package skyHo.Master;
+package wareHouse.Master;
 
 import java.util.Date;
 
@@ -7,7 +7,7 @@ import io.quarkus.hibernate.orm.panache.PanacheEntityBase;
 import jakarta.persistence.Column;
 import jakarta.persistence.MappedSuperclass;
 import jakarta.persistence.Version;
-import skyHo.Master.Util.JsonUtil;
+import wareHouse.Master.Util.JsonUtil;
 
 @MappedSuperclass
 public abstract class AuditInfoVersionBaseEntity extends PanacheEntityBase {

@@ -1,4 +1,4 @@
-package skyHo.Master.Util;
+package wareHouse.Master.Util;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;

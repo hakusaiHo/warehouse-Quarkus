@@ -1,13 +1,19 @@
-package skyHo.Master.Model.ItemMaster;
+package wareHouse.Master.Model.ItemMaster;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.IdClass;
 import jakarta.persistence.Table;
-import skyHo.Master.AuditInfoVersionBaseEntity;
+import lombok.Getter;
+import lombok.Setter;
+import wareHouse.Master.AuditInfoVersionBaseEntity;
 
+@Setter
+@Getter
 @Entity
-@Table(name = "ktst_item_master")
+@Table(name = "KTST_ITEM_MASTER")
+@IdClass(ItemMasterPK.class)
 public class ItemMaster extends AuditInfoVersionBaseEntity {
     @Id
     @Column(name = "item_id")

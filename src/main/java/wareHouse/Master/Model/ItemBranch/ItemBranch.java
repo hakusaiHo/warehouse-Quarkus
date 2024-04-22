@@ -1,4 +1,4 @@
-package skyHo.Master.Model.ItemBranch;
+package wareHouse.Master.Model.ItemBranch;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -7,7 +7,7 @@ import jakarta.persistence.IdClass;
 import jakarta.persistence.Table;
 import lombok.Getter;
 import lombok.Setter;
-import skyHo.Master.AuditInfoVersionBaseEntity;
+import wareHouse.Master.AuditInfoVersionBaseEntity;
 
 @Entity
 @Table(name = "KTST_ITEM_BRANCH")
