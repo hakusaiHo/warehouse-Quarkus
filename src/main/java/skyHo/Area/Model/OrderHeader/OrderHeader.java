@@ -1,18 +1,18 @@
-package main.java.skyHo.master;
+package skyHo.Area.Model.OrderHeader;
 
 import java.util.Date;
-
 import jakarta.json.bind.annotation.JsonbDateFormat;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.IdClass;
 import jakarta.persistence.Table;
+import skyHo.Master.AuditInfoVersionBaseEntity;
 
 @Entity
 @Table(name = "KTST_ORDER_HEADER")
 @IdClass(OrderHeaderPK.class)
-public class OrderHeader extends AuditInfoBaseEntity {
+public class OrderHeader extends AuditInfoVersionBaseEntity {
 
     @Column(name = "ORDER_COMPANY", length = 5)
     @Id
