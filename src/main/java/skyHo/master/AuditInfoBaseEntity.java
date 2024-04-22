@@ -1,4 +1,4 @@
-package main.java.skyHo.master;
+package skyHo.Master;
 
 import java.util.Date;
 import jakarta.persistence.Column;
@@ -9,7 +9,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import io.quarkus.hibernate.orm.panache.PanacheEntityBase;
 
 @MappedSuperclass
-public abstract class AuditInfoBaseEntity extends PanacheEntityBase{
+public abstract class AuditInfoBaseEntity extends PanacheEntityBase {
 
     @JsonIgnore
     @Column(name = "MODIFIED_USER")
@@ -20,16 +20,15 @@ public abstract class AuditInfoBaseEntity extends PanacheEntityBase{
     // @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss.SSS")
     public Date modifiedDate;
 
-
     @PrePersist
     protected void prePersist() {
         if (this.modifiedDate == null) {
             this.modifiedDate = new Date();
-        }       
+        }
     }
 
     @PreUpdate
-    protected void preUpdate() {       
+    protected void preUpdate() {
         this.modifiedDate = new Date();
     }
 }
