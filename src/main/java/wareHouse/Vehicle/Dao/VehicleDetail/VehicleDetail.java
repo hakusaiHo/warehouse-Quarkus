@@ -9,13 +9,14 @@ import jakarta.persistence.IdClass;
 import jakarta.persistence.Table;
 import lombok.Getter;
 import lombok.Setter;
+import wareHouse.Master.AuditInfoBaseEntity;
 
 @Getter
 @Setter
 @Table(name = "KTST_VEHICLE_DETAIL")
 @Entity
 @IdClass(VehicleDetailPK.class)
-public class VehicleDetail {
+public class VehicleDetail extends AuditInfoBaseEntity {
 
     @Id
     @Column(name = "VEHICLE_ID", length = 30)

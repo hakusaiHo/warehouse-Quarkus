@@ -8,13 +8,14 @@ import jakarta.persistence.Table;
 import lombok.Getter;
 import lombok.NonNull;
 import lombok.Setter;
+import wareHouse.Master.AuditInfoBaseEntity;
 
 @Getter
 @Setter
 @Table(name = "KTST_VEHICLE_TYPE")
 @Entity
 @IdClass(VehicleTypePK.class)
-public class VehicleType {
+public class VehicleType extends AuditInfoBaseEntity {
 
     @Id
     @Column(name = "VEHICLE_TYPE_ID", length = 10)
