@@ -1,3 +1,8 @@
+-- INSERT INTO ktst.ktst_item_master
+-- (allocation_uom, glcategory, item_id, pricing_uom, primary_uom, production_uom, purchase_uom, secondary_uom, shipping_uom
+-- , stock_days, stocking_type, volume_uom, weight_uom, modified_date, modified_user, address_number_planner, buyer, item_number, description1, description2)
+-- VALUES('', '', 548, '', '', 'KG', '', '', '', 0, '', '', '', '', 0, 0, 0, '', '', '');
+
 INSERT INTO ktst_item_master
 (item_id, sales_category_code, modified_date, modified_user, item_number, description1, description2, allergen_mark, muslim_mark)
 VALUES(548, '140', NOW(), 42, '000494', '迪化148原味開心果5斤4包入', '5斤/包,4包/箱', true, false);
