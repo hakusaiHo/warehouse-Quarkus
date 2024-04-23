@@ -5,9 +5,13 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.IdClass;
 import jakarta.persistence.Table;
+import lombok.Getter;
 import lombok.NonNull;
+import lombok.Setter;
 import wareHouse.Master.AuditInfoVersionBaseEntity;
 
+@Getter
+@Setter
 @Entity
 @Table(name = "KTST_VEHICLE_MASTER")
 @IdClass(VehicleMasterPK.class)
