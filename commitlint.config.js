@@ -14,4 +14,4 @@ module.exports = {
     ]],
     'header-max-length': [2, 'always', 30],
     'body-min-length': [2, 'always', 10] 
-};
+}}
