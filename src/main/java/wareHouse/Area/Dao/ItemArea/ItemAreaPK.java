@@ -1,18 +1,29 @@
 package wareHouse.Area.Dao.ItemArea;
 
+import lombok.Getter;
+import lombok.Setter;
+
+@Setter
+@Getter
 public class ItemAreaPK {
     public Integer itemId;
     public String branch;
-    public ItemAreaPK(Integer itemId, String branch) {
+
+    public ItemAreaPK(String branch, Integer itemId) {
         this.itemId = itemId;
         this.branch = branch;
     }
+
+    public ItemAreaPK() {
+    }
+
     @Override
     public int hashCode() {
         int result;
         result = branch.hashCode() + itemId.hashCode();
         return result;
     }
+
     @Override
     public boolean equals(Object other) {
         if (this == other)
@@ -28,5 +39,5 @@ public class ItemAreaPK {
             return false;
         return true;
     }
-    
+
 }

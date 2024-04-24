@@ -10,7 +10,7 @@ import lombok.Setter;
 import wareHouse.Master.AuditInfoBaseEntity;
 
 @Entity
-@Table(name="KTST_ITEM_AREA")
+@Table(name = "KTST_ITEM_AREA")
 @Getter
 @Setter
 @IdClass(ItemAreaPK.class)
@@ -25,5 +25,5 @@ public class ItemArea extends AuditInfoBaseEntity {
     public Integer itemId;
 
     @Column(name = "PREFER_SAVE_AREA", length = 15)
-    public String preferSaveArea;   
+    public String preferSaveArea;
 }
