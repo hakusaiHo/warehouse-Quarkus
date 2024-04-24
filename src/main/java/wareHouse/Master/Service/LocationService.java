@@ -21,4 +21,8 @@ public class LocationService {
             return Collections.emptyList();
         }
     }
+
+    public List<Location> getLocationById(String locationId) {
+        return Location.findById(locationId);
+    }
 }
