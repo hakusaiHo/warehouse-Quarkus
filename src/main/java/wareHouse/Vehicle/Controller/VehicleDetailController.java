@@ -99,7 +99,7 @@ public class VehicleDetailController {
     }
 
     @POST
-    @Path("/VehicleDetailQuantity")
+    @Path("/Quantity")
     @Transactional
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
