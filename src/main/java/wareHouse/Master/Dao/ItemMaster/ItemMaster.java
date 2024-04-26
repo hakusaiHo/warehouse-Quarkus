@@ -13,7 +13,6 @@ import wareHouse.Master.AuditInfoVersionBaseEntity;
 @Getter
 @Entity
 @Table(name = "KTST_ITEM_MASTER")
-@IdClass(ItemMasterPK.class)
 public class ItemMaster extends AuditInfoVersionBaseEntity {
 
     @Id
