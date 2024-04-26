@@ -29,7 +29,7 @@ import wareHouse.Master.Dao.Location.Location;
 import wareHouse.Master.Service.ItemBranchService;
 import wareHouse.Master.Service.LocationService;
 
-@Path("public/AreaLocation")
+@Path("public/areaLocation")
 @Produces(MediaType.APPLICATION_JSON)
 @Consumes(MediaType.APPLICATION_JSON)
 @Tag(name = "AreaLocation", description = "儲區儲位對照檔")
@@ -137,7 +137,7 @@ public class AreaLocationController {
     @Path("/bulk")
     @Transactional
     @RolesAllowed({ "AppDeveloper", "AppManager", "WarehouseKeeper" })
-    @Operation(summary = "刪除儲區儲位設定資料列表")
+    @Operation(summary = "批次刪除儲區儲位設定資料")
     public Response deleteAreaLocationList(List<AreaLocationPK> deleteRequest) {
         return areaLocationService.deleteAreaLocationList(deleteRequest);
     }

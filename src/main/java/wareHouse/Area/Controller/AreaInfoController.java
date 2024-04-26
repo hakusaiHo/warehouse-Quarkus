@@ -32,7 +32,7 @@ import java.util.stream.Collectors;
 import org.eclipse.microprofile.openapi.annotations.Operation;
 import org.eclipse.microprofile.openapi.annotations.tags.Tag;
 
-@Path("public/AreaInfo")
+@Path("public/areaInfo")
 @Produces(MediaType.APPLICATION_JSON)
 @Consumes(MediaType.APPLICATION_JSON)
 @Tag(name = "AreaInfo", description = "儲區設定檔")
@@ -135,7 +135,7 @@ public class AreaInfoController {
     @Path("/bulk")
     @Transactional
     @RolesAllowed({ "AppDeveloper", "AppManager", "WarehouseKeeper" })
-    @Operation(summary = "刪除儲區設定資料列表")
+    @Operation(summary = "批次刪除儲區設定資料")
     public Response deleteAreaInfoList(List<AreaInfoPK> deleteRequest) {
         return areaInfoService.deleteAreaInfoList(deleteRequest);
     }

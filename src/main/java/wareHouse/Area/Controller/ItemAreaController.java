@@ -31,7 +31,7 @@ import wareHouse.Master.Service.ItemService;
 import jakarta.annotation.security.RolesAllowed;
 import jakarta.inject.Inject;
 
-@Path("public/ItemArea")
+@Path("public/itemArea")
 @Produces(MediaType.APPLICATION_JSON)
 @Consumes(MediaType.APPLICATION_JSON)
 @Tag(name = "ItemArea", description = "料品偏好保存設定區域")
@@ -136,7 +136,7 @@ public class ItemAreaController {
     @Path("/itemArea/bulk")
     @Transactional
     @RolesAllowed({ "AppDeveloper", "AppManager", "WarehouseManager" })
-    @Operation(summary = "刪除料品偏好保存區域列表")
+    @Operation(summary = "批次刪除料品偏好保存區域")
     public Response deleteItemAreaList(List<ItemAreaList> deleteRequest) {
         return itemAreaService.deleteItemAreaList(deleteRequest);
     }
