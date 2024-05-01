@@ -4,11 +4,14 @@ import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.stream.Collectors;
+
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.inject.Inject;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.Query;
 import jakarta.transaction.Transactional;
+import jakarta.ws.rs.core.Response;
 import wareHouse.Vehicle.Dao.VehicleDetail.VehicleDetail;
 import wareHouse.Vehicle.Dao.VehicleDetail.VehicleDetailPK;
 import wareHouse.Vehicle.Dao.VehicleMaster.VehicleMaster;
@@ -127,5 +130,16 @@ public class VehicleDetailService {
                 em.merge(targetDetail);
             }
         });
+    }
+
+    public Response deleteVehicleList(List<VehicleDetailPK> deleteRequest) {
+        if (deleteRequest == null || deleteRequest.isEmpty()) {
+            return Response.status(Response.Status.BAD_REQUEST).build();
+        }
+        for (VehicleDetailPK pk : deleteRequest) {
+            VehicleDetail foundList = em.find(VehicleDetail.class, pk);
+            em.remove(foundList);
+        }
+        return Response.status(Response.Status.OK).build();
     }
 }
