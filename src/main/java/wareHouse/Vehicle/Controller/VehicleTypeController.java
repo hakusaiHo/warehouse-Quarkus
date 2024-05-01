@@ -28,7 +28,7 @@ import wareHouse.Vehicle.Dao.VehicleType.VehicleTypePK;
 @Path("public/vehicleType")
 @Produces(MediaType.APPLICATION_JSON)
 @Consumes(MediaType.APPLICATION_JSON)
-@Tag(name = "vehicleType", description = "載具類別資訊管理")
+@Tag(name = "VehicleType", description = "載具類別資訊管理")
 public class VehicleTypeController {
 
     @Inject

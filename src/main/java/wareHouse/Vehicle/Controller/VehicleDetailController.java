@@ -22,6 +22,7 @@ import wareHouse.Vehicle.Service.VehicleDetailService;
 import java.net.URI;
 import java.util.Date;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
@@ -31,7 +32,7 @@ import org.eclipse.microprofile.openapi.annotations.tags.Tag;
 @Path("public/vehicleDetail")
 @Produces(MediaType.APPLICATION_JSON)
 @Consumes(MediaType.APPLICATION_JSON)
-@Tag(name = "vehicleDetail", description = "載具承載明細管理")
+@Tag(name = "VehicleDetail", description = "載具承載明細管理")
 public class VehicleDetailController {
 
     @Inject
@@ -96,6 +97,14 @@ public class VehicleDetailController {
 
         VehicleDetail.deleteById(pk);
         return Response.ok().build();
+    }
+
+    @DELETE
+    @Path("/bulk")
+    @Transactional
+    @Operation(summary = "批次刪除載具承載明細")
+    public Response deleteVehicleDetailList(List<VehicleDetailPK> deleteRequest) {
+        return vehicleDetailService.deleteVehicleList(deleteRequest);
     }
 
     @POST
