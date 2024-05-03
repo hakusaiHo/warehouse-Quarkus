@@ -8,6 +8,7 @@ import org.junit.jupiter.api.Test;
 import io.quarkus.test.common.http.TestHTTPEndpoint;
 import io.quarkus.test.junit.QuarkusTest;
 import io.restassured.http.ContentType;
+import io.vertx.core.json.JsonArray;
 import io.vertx.core.json.JsonObject;
 import jakarta.inject.Inject;
 import jakarta.persistence.EntityManager;
@@ -55,6 +56,18 @@ public class AreaInfoControllerTest {
     @Test
     void testDeleteAreaInfoList() {
 
+        JsonArray deleteRequest = new JsonArray();
+        deleteRequest.add(new JsonObject().put("branch", "A011").put("area", "V41P"));
+
+        String redResult = given()
+                .accept(ContentType.JSON)
+                .contentType(ContentType.JSON)
+                .body(deleteRequest.encode())
+                .when().delete("/bulk")
+                .then().statusCode(200)
+                .extract().body().asString();
+        Assertions.assertNotNull(redResult);
+        Assertions.assertTrue(redResult.isEmpty());
     }
 
     @Test

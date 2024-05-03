@@ -119,6 +119,9 @@ VALUES(NOW(), 1, 'A010', 'V40U', '聯華三樓U棟01區');
 INSERT INTO ktst_area_info
 (modified_date, modified_user, branch, area, area_name)
 VALUES(NOW(), 1, 'A010', 'V41U', '聯華三樓U棟02區');
+INSERT INTO ktst_area_info
+(modified_date, modified_user, branch, area, area_name)
+VALUES(NOW(), 1, 'A011', 'V41P', '聯華三樓P棟01區');
 --3/18 儲區儲位對照檔
 INSERT INTO ktst_area_location
 (is_virtual, modified_date, modified_user, branch, area, location_desc, location_id)
